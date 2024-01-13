@@ -1,8 +1,29 @@
+/*
+ * SPDX-FileCopyrightText: 2024 Rossen Dobrinov
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/*
+ * Copyright 2024 Rossen Dobrinov
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 #include <stdio.h>
 #include "gpio_driver.h"
 #include "esp_private/esp_gpio_reserve.h"
 #include "esp_chip_info.h"
-#include "esp_log.h"
 
 #ifdef CONFIG_GPIO_TEXT_FUNCTIONS
 static const char *pure_gpio = "GPIO";
@@ -66,7 +87,6 @@ void gpio_drv_init(void) {
     #endif
     _drv_config._reserve_status = _drv_config._system_reserved;
     free(chip_info);
-    ESP_LOGI("gdrv", "%llX", _drv_config._reserve_status);
 }
 
 bool gpio_drv_reserve(gpio_num_t gpio_num) {
