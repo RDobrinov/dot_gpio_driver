@@ -21,6 +21,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "idf_gpio_driver.h"
 #include "esp_private/esp_gpio_reserve.h"
 #include "esp_chip_info.h"
