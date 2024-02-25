@@ -32,9 +32,12 @@
 #include "soc/rtc_io_struct.h"
 #include "soc/soc.h"
 
+/**
+ * @brief Type of GPIO states
+*/
 typedef enum {
-    GPIO_STATE_LOW = 0,
-    GPIO_STATE_HIGH = 1
+    GPIO_STATE_LOW = 0, /*!< GPIO Low */
+    GPIO_STATE_HIGH = 1 /*!< GPIO High */
 } gpio_drv_state_t;
 
 /**
